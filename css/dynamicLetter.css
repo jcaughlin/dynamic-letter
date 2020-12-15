@@ -1,0 +1,50 @@
+body {
+    font-family: "Verdana", "Arial";
+}
+
+.form-card {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 10px 0 10px 0;
+}
+
+input[type="text"],
+select,
+textarea {
+    box-shadow: 2px 2px grey;
+}
+
+.pageBanner {
+    background-color: #6766ff;
+}
+
+.wrapper {
+    background-image: url("images/ButtonBackgroundBlueLarge.gif");
+    width: 100%;
+}
+
+.form-wrapper {
+    background-color: whitesmoke;
+    /* width:50%;*/
+    border-style: solid;
+}
+
+.debug-pink {
+    background-color: pink;
+}
+
+.debug-blue {
+    background-color: blue;
+}
+
+.debug-yellow {
+    background-color: yellow;
+}
+
+.btn {
+    padding: 0;
+}
+
+label {
+    font-weight: bold;
+}

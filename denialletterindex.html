@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!--Local CSS-->
+        <link rel="stylesheet" href="css/dynamicLetter.css" />
+        <title>Client Documentation Portal</title>
+    </head>
+
+    <body>
+
+        <div class="container-fluid">
+            <nav class="navbar nav row mt-3" aria-label="DCF Navigation Menu Bar">
+                <a href="https://dcf.wisconsin.gov/" class="btn btn-outline-dark rounded-0 col" role="button"
+                    aria-pressed="true">Home</a>
+                <a href="https://dcf.wisconsin.gov/" class="btn btn-outline-dark rounded-0 col" role="button"
+                    aria-pressed="true">New</a>
+                <a href="https://dcf.wisconsin.gov/" class="btn btn-outline-dark rounded-0 col" role="button"
+                    aria-pressed="true">Search</a>
+                <a href="https://dcf.wisconsin.gov/" class="btn btn-outline-dark rounded-0 col" role="button"
+                    aria-pressed="true">Dashboard</a>
+                <a href="https://dcf.wisconsin.gov/" class="btn btn-outline-dark rounded-0 col" role="button"
+                    aria-pressed="true">Announcements</a>
+                <a href="https://dcf.wisconsin.gov/" class="btn btn-outline-dark rounded-0 col" role="button"
+                    aria-pressed="true">Reports</a>
+            </nav>
+
+            <div class="row mt-5 p-2 form-wrapper mx-auto">
+                <div class="col-md-10 mx-auto">
+                    <form class="border p-2">
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="m-3">
+                                    <h1 class="text-center">Client Documentation Portal</h1>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-card">
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <div id="currentDateLabel"></div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="currentDate"></div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+
+                                <div class="col-md-2">
+                                    <label for="mailArticleNumber">Certified Mail Article Number:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="mailArticleNumber"
+                                        name="mailArticleNumber">        
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="regionSelect" class="col-md-2">Select a Region:</label>
+                                <div class="col-md-6">
+                                    <select id="regionSelect" class="form-control">
+                                        <option>Northern Region</option>
+                                        <option>Southeastern Region</option>
+                                        <option>Northeastern Region</option>
+                                        <option>Northern</option>
+                                        <option>Western</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="countySelection" class="col-md-2">Select County:</label>
+                                <div class="col-md-6">
+                                    <select name="countySelection" class="form-control" id="countySelection">
+                                        <option selected="selected" value="#empty">Select Agency</option>
+
+                                        <option value="#regionfourcontent">Adams County</option>
+
+                                        <option value="#regiontwocontent">Ashland County</option>
+
+                                        <option value="#regiontwocontent">Bad River</option>
+
+                                        <option value="#regionfivecontent">Barron County</option>
+
+                                        <option value="#regiontwocontent">Bayfield Tribe</option>
+
+                                        <option value="#regiononecontent">Brown County</option>
+
+                                        <option value="#regionfivecontent">Buffalo County</option>
+
+                                        <option value="#regionfivecontent">Burnett County</option>
+
+                                        <option value="#regiononecontent">Calumet County</option>
+
+                                        <option value="#regionfivecontent">Chippewa County</option>
+
+                                        <option value="#regionfivecontent">Clark County</option>
+
+                                        <option value="#regionfourcontent">Columbia County</option>
+
+                                        <option value="#regionfourcontent">Crawford County</option>
+
+                                        <option value="#regionfourcontent">Dane County</option>
+
+                                        <option value="#regionfourcontent">Dodge County</option>
+
+                                        <option value="#regiononecontent">Door County</option>
+
+                                        <option value="#regionfivecontent">Douglas County</option>
+
+                                        <option value="#regionfivecontent">Dunn County</option>
+
+                                        <option value="#regionfivecontent">Eau Claire County</option>
+
+                                        <option value="#regiontwocontent">Florence County</option>
+
+                                        <option value="#regiononecontent">Fond du Lac County</option>
+
+                                        <option value="#regiontwocontent">Forest County</option>
+
+                                        <option value="#regiontwocontent">Forest County Potawatomi</option>
+
+                                        <option value="#regionfourcontent">Grant County</option>
+
+                                        <option value="#regionfourcontent">Green County</option>
+
+                                        <option value="#regiononecontent">Green Lake County</option>
+
+                                        <option value="#regionfourcontent">Ho-Chuck Nation</option>
+
+                                        <option value="#regionfourcontent">Iowa County</option>
+
+                                        <option value="#regiontwocontent">Iron County</option>
+
+                                        <option value="#regionfivecontent">Jackson County</option>
+
+                                        <option value="#regionfourcontent">Jefferson County</option>
+
+                                        <option value="#regionfourcontent">Juneau County</option>
+
+                                        <option value="#regionthreecontent">Kenosha County</option>
+
+                                        <option value="#regiononecontent">Kewaunee County</option>
+
+                                        <option value="#regiontwocontent">Lac Courte Oreilles</option>
+
+                                        <option value="#regiontwocontent">Lac du Flambeau Tribe</option>
+
+                                        <option value="#regionfivecontent">La Crosse County</option>
+
+                                        <option value="#regionfourcontent">Lafayette County</option>
+
+                                        <option value="#regiontwocontent">Langlade County</option>
+
+                                        <option value="#regiontwocontent">Lincoln County</option>
+
+                                        <option value="#regiononecontent">Manitowoc County</option>
+
+                                        <option value="#regiontwocontent">Marathon County</option>
+
+                                        <option value="#regiononecontent">Marinette County</option>
+
+                                        <option value="#regiononecontent">Marquette County</option>
+
+                                        <option value="#regiononecontent">Menominee County</option>
+
+                                        <option value="#regionthreecontent">Milwaukee County</option>
+
+                                        <option value="#regionfivecontent">Monroe County</option>
+
+                                        <option value="#regiononecontent">Oconto County</option>
+
+                                        <option value="#regiontwocontent">Oneida County</option>
+
+                                        <option value="#regiononecontent">Oneida Tribe</option>
+
+                                        <option value="#regiononecontent">Outagamie County</option>
+
+                                        <option value="#regiononecontent">Ozaukee County</option>
+
+                                        <option value="#regionfivecontent">Pepin County</option>
+
+                                        <option value="#regionfivecontent">Pierce County</option>
+
+                                        <option value="#regionfivecontent">Polk County</option>
+
+                                        <option value="#regiontwocontent">Portage County</option>
+
+                                        <option value="#regiontwocontent">Price County</option>
+
+                                        <option value="#regionthreecontent">Racine County</option>
+
+                                        <option value="#regiontwocontent">Red Cliff</option>
+
+                                        <option value="#regionfourcontent">Richland County</option>
+
+                                        <option value="#regionfourcontent">Rock County</option>
+
+                                        <option value="#regionfivecontent">Rusk County</option>
+
+                                        <option value="#regionfivecontent">Saint Croix Chippewa</option>
+
+                                        <option value="#regionfivecontent">St. Croix County</option>
+
+                                        <option value="#regionfourcontent">Sauk County</option>
+
+                                        <option value="#regiontwocontent">Sawyer County</option>
+
+                                        <option value="#regiononecontent">Shawano County</option>
+
+                                        <option value="#regiononecontent">Sheboygan County</option>
+
+                                        <option value="#regiontwocontent">Sokaogon Tribe</option>
+
+                                        <option value="#regiononecontent">Stockbridge-Munsee Tribe</option>
+
+                                        <option value="#regiontwocontent">Taylor County</option>
+
+                                        <option value="#regionfivecontent">Trempealeau County</option>
+
+                                        <option value="#regionfivecontent">Vernon County</option>
+
+                                        <option value="#regiontwocontent">Vilas County</option>
+
+                                        <option value="#regionfourcontent">Walworth County</option>
+
+                                        <option value="#regionfivecontent">Washburn County</option>
+
+                                        <option value="#regiontwocontent">Wood County</option>
+
+                                        <option value="#regiononecontent">Washington County</option>
+
+                                        <option value="#regionthreecontent">Waukesha County</option>
+
+                                        <option value="#regiononecontent">Waupaca County</option>
+
+                                        <option value="#regiononecontent">Waushara County</option>
+
+                                        <option value="#regiononecontent">Winnebago County</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--CBU Office-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label>CBU Office: </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" value="madison" id="madison"
+                                            name="cbuOffice">
+                                         <label class="radio-inline form-check-label" for="madison">Madison</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" value="waukesha" id="waukesha"
+                                            name="cbuOffice">
+                                        <label class="radio-inline form-check-label" for="waukesha">Waukesha</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!--CBU Supervisor-->
+
+                            <div class="form-group row">
+
+                                <div class="col-md-2">
+                                    <label for="supervisor">Supervisor:</label>
+                                </div>
+
+                                <div class="col-md-10">
+                                    <select id="supervisor" class="form-control">
+                                        <option value="Evans">Michelle Evans</option>
+
+                                        <option value="Utech">Laura Utech</option>
+
+                                        <option value="Kujava">Lee Kujava</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <!--TODO Add Analyst Phone #-->
+
+                            <!--TODO Add Analyst Title-->
+
+                            <div class="form-group row">
+
+                                <div class="col-md-2">
+                                    <label for="backgroundAnalystName">Background Analyst:</label>
+                                </div>
+
+                                <div class="col-md-10">
+                                    <select id="backgroundAnalystName" class="form-control">
+                                        <option value="Evans">Add Names</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!--Applicant Provider Contact Information Section-->
+
+                        <div class="form-card">
+
+                            <h3 class="text-center">Applicant Info</h3>
+                            <!--Applicant Provider Name-->
+                            <div class="form-group row">
+                                <label for="applicantProviderName" class="col-md-2">Applicant/Provider Name:</label>
+                                <div class="col-md-10">
+                                    <input type="text" id="applicantProviderName" class="form-control"
+                                        name="applicantProviderName">
+                                </div>
+                            </div>
+
+                            <!--Regulation Type-->
+                            <div class="form-group row">
+                                <label for="regulatoryAuthority" class="col-md-2">Regulation Type:</label>
+                                <div class="col-md-4">
+                                    <select id="regulatoryAuthority" class="form-control">
+                                        <option value="" selected>-Choose Regulation/Facility Type-</option>
+                                        <option value="certified">Certified</option>
+                                        <option value="licensed">Licensed</option>
+                                        <option value="licensedExempt">Licensed Exempt</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!--Center Type-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="facilityType">Center Type:</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <select id="facilityType" class="form-control"></select>
+                                </div>
+                            </div>
+
+                            <!--Applicant First Name-->
+                            <div class="form-group row">
+                                <label for="applicantFirstName" class="col-md-2">First Name:</label>
+                                <label for="honorific" class="col-md-2 sr-only">Title</label>
+                                <div class="col-md-1">
+                                    <select id="honorific" class="form-control">
+                                        <option value="Mr">Mr</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Sir">Sir</option>
+                                        <option value="hisExcellency">His Excellency</option>
+                                    </select>
+                                </div>
+
+
+                                <!--Applicant Last Name-->
+                                <div class="col-md-4">
+                                    <input type="text" id="applicantFirstName" class="form-control">             
+                                </div>
+                                <label for="applicantLastName" class="col-md-1">Last Name:</label>
+                                <div class="col-md-4">
+                                    <input type="text" id="applicantLastName" class="form-control">             
+                                </div>
+                            </div>
+
+                            <!--Street Address-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="streetAddress" class="col-form-label">Street Address:</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="streetAddress" class="form-control" name="streetAddress">
+                                                
+                                </div>
+                            </div>
+
+                            <!--Street Address-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="streetAddress2" class="col-form-label">Street Address 2:</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="streetAddress2" class="form-control" name="streetAddress2">
+                                                
+                                </div>
+                            </div>
+
+                            <!--City State Zip Row-->
+                            <div class="form-group row">
+                                <!--City-->
+                                <label for="cityName" class="col-md-2">City:</label>
+                                <div class="col-md-3">
+                                    <input type="text" id="cityName" name="cityName" class="form-control">             
+                                </div>
+
+                                <!--State-->
+                                <label for="stateName" class="col-md-1">State:</label>
+                                <div class=col-md-2>
+                                    <select id="stateName" class="form-control">
+                                        <option value="WI">WI</option>
+                                    </select>
+                                </div>
+
+                                <!--Zip Code-->
+                                <label for="zipCode" class="col-md-1">Zip Code;</label>
+                                <div class="col-md-2">
+                                    <input type="text" id="zipCode" name="zipCode" class="form-control">             
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-card">
+                            <h3 class="text-center">Denial Information</h3>
+                            <!--Rehabilitaion Status-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="rehabilitationStatus" class="form-check-label">Rehabilitation
+                                        Status:</label>
+                                    <small class="form-text text-muted">(Choose One)</small>
+                                </div>
+
+                                <div class="col-md-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="permanentBar" type="radio"
+                                            name="rehabilitationStatus" value="permanentBar"><label for="permanentBar"
+                                            class="form-check-label">Barred
+                                            Offense-Permanent Bar</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="rehabPermitted" type="radio"
+                                            name="rehabilitationStatus" value="rehabPermitted"><label
+                                            for="rehabPermitted" class="form-check-label">Barred
+                                            Offense-Rehabilitation Review Permitted</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="barredFiveYearRehab" type="radio"
+                                            name="rehabilitationStatus" value="barredFiveYearRehab"><label
+                                            for="barredFiveYearRehab" class="form-check-label">Barred
+                                            Offense-Five Year Rehab</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Denial Type-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                    <label for="denialReason" class="form-check-label">Type Of Denial:</label>
+                                    <small class="form-text text-muted">(Choose Up to Three)</small>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="substantiallyRelated" type="checkbox"
+                                            name="denialReason" value="substantiallyRelated"> <label
+                                            for="substantiallyRelated" class="form-check-label">Substantially
+                                            Related</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="fitAndQualified" type="checkbox"
+                                            name="denialReason" value="fitAndQualified"> <label for="fitAndQualified"
+                                            class="form-check-label">Fit
+                                            and Qualified</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="falsificationAndOmission" type="checkbox"
+                                            name="denialReason" value="falsificationAndOmission"><label
+                                            for="barredFiveYearRehab" class="form-check-label">Falsification
+                                            and Omission</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Rehabilitation Allowed-->
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label>Rehabilitation Allowed?</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="rehabilitationIsAllowed"
+                                            name="rehabilitationAllowed" value="rehabilitationIsAllowed"><label
+                                            for="rehabilitationAllowed" class="form-check-label">Yes</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rehabilitationAllowed"
+                                            value="rehabilitationIsNOTAllowed">
+                                        <label for="rehabilitationAllowed" class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="denialBackground"></div>
+                            <div class="form-group row">
+                                <label for="background" class="col-md-2">Background:</label>
+                                <div class="col-md-8">
+                                    <textarea id="background" class="form-control" rows="4"></textarea>             
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="reason" class="col-md-2">Final Reason for Denial:</label>
+                                <div class="col-md-8">
+                                    <textarea id="reason" class="form-control" rows="4"></textarea>             
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Rehabilitation Confirmation Modal-->
+                        <div class="row">
+                            <div id="rehabilitationIsAllowedText" class="modal fade py-5" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <div class="col-xs-12 mx-auto">
+                                                <h4 class="modal-title">Please Confirm-Rehabilitation is Allowed</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <p>
+                                                <strong>
+                                                    <em>The following paragragh will appear in the denial
+                                                        letter:</em>
+                                                </strong>
+                                            <p>Under Wis. Admin Code DCF 12. Caregiver Law and Wis.
+                                                Stat. 48.686, Individuals found guilty of certain
+                                                                      
+                                                crimes and other offenses may require a Rehabilitation Review approval
+                                                before
+                                                that person may receive                         a license or be
+                                                employed
+                                                at or reside in a child care center. However, obtaining a rehabilitaion
+                                                                      
+                                                review approval does not guarentee licensure or certification,
+                                                employment,
+                                                or residency ay a childcare                         center. All
+                                                requests
+                                                and applications are subject to addional regulatory requirements and
+                                                background
+                                                                        checks. If you wish to apply for a
+                                                Rehabilitation
+                                                Review pursuant to DCF 12, the application can                        
+                                                be
+                                                found at                         <a
+                                                    href="https://dcf.wisconsin.gov/rehab-review">https://dcf.wisconsin.gov/rehab-review</a>
+                                            </p>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button class="btn btn-lg btn-outline-dark">Confirmed</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="button" class="btn btn-lg btn-warning p-2">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <script src="js/formCreator.js"></script>
+    </body>
+
+</html>
